@@ -1,0 +1,42 @@
+<ly-card>
+  <ly-card-content>
+    <h2 lyTyp="headline" gutterBottom>Excluir Veiculo</h2>
+    <form>
+      <ly-field>
+        <input lyNativeControl placeholder="Ano de fabricação" [(ngModel)]="veiculo.anoFabricacao" name="anoFabricacao" disabled>
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Modelo" [(ngModel)]="veiculo.modelo" name="modelo" disabled>
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Placa" [(ngModel)]="veiculo.placa" name="placa" disabled>
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Cor" [(ngModel)]="veiculo.cor" name="cor" disabled>
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="KM" [(ngModel)]="veiculo.km" name="km" disabled>
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Tipo de Combustivel" [(ngModel)]="veiculo.tipoCombustivel" name="tipoCombustivel" disabled>
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Categoria" [(ngModel)]="veiculo.categoria" name="categoria" disabled>
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Estado de Conservação" [(ngModel)]="veiculo.estadoConservacao" name="estadoConservacao" disabled>
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Marca" [(ngModel)]="veiculo.marca" name="marca" disabled>
+      </ly-field>
+    </form>
+  </ly-card-content>
+  <ly-card-actions>
+    <button ly-button outlined color="secondary" (click)="deleteVeiculo()">
+      <ly-icon [withClass]="classes.icon">done</ly-icon>
+    </button>
+    <button ly-button outlined color="warn" (click)="cancel()">
+      <ly-icon [withClass]="classes.icon">cancel</ly-icon>
+    </button>
+  </ly-card-actions>
+</ly-card>

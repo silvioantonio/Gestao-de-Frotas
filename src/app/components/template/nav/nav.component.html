@@ -1,0 +1,27 @@
+<ly-grid [height]="'75%'" [width]="'20%'" container style="float: left; position: relative;">
+  <ly-grid item col="12">
+    <div [height]="1" >
+      <ly-paper [className]="classes.item">
+        <ly-list>
+          <a routerLink="/veiculos">
+            <ly-list-item>
+              <span ly-line>Veiculo</span>
+            </ly-list-item>
+          </a>
+          <ly-divider></ly-divider>
+          <a href="#">
+            <ly-list-item>
+              <span ly-line>Condutor</span>
+            </ly-list-item>
+          </a>
+          <ly-divider></ly-divider>
+          <a href="#">
+            <ly-list-item>
+              <span ly-line>Ordem de Trafego</span>
+            </ly-list-item>
+          </a>
+        </ly-list>
+      </ly-paper>
+    </div>
+  </ly-grid>
+</ly-grid>

@@ -1,0 +1,71 @@
+<ly-card>
+  <ly-card-content>
+    <h2 lyTyp="headline" gutterBottom>Novo Veiculo</h2>
+    <form>
+      <ly-field>
+        <input lyNativeControl placeholder="Ano de fabricação" [(ngModel)]="veiculo.anoFabricacao" name="anoFabricacao">
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Modelo" [(ngModel)]="veiculo.modelo" name="modelo">
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Placa" [(ngModel)]="veiculo.placa" name="placa">
+      </ly-field>
+      <ly-field class="alter">
+        <input lyNativeControl placeholder="Cor" [(ngModel)]="veiculo.cor" name="cor">
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="KM" [(ngModel)]="veiculo.km" name="km">
+      </ly-field>
+      <ly-field class="alter" appearance="outlined">
+        <ly-label>Marcas</ly-label>
+        <ly-select placeholder="Marca"
+          [(ngModel)]="veiculo.marca" name="marca">
+          <ly-option value="FIAT">Fiat</ly-option>
+          <ly-option value="CHEVROLET">Chevrolet</ly-option>
+          <ly-option value="FORD">Ford</ly-option>
+          <ly-option value="TOYOTA">Toyota</ly-option>
+        </ly-select>
+      </ly-field>
+      <ly-field appearance="outlined">
+        <ly-label>Tipos de Combustivel</ly-label>
+        <ly-select placeholder="Tipos"
+          [(ngModel)]="veiculo.tipoCombustivel" name="tipoCombustivel">
+          <ly-option value="DIESEL">Diesel</ly-option>
+          <ly-option value="GASOLINA">Gasolina</ly-option>
+          <ly-option value="ALCOOL">Alcool</ly-option>
+          <ly-option value="FLEX">Flex</ly-option>
+        </ly-select>
+      </ly-field>
+      <ly-field appearance="outlined">
+        <ly-label>Estado Conservação</ly-label>
+        <ly-select placeholder="Estados Conservação"
+          [(ngModel)]="veiculo.estadoConservacao" name="estadoConservacao">
+          <ly-option value="NOVO">Novo</ly-option>
+          <ly-option value="SEMI_NOVO">Semi-Novo</ly-option>
+          <ly-option value="VELHO">Velho</ly-option>
+        </ly-select>
+      </ly-field>
+      <ly-field class="alter" appearance="outlined">
+        <ly-label>Categorias</ly-label>
+        <ly-select placeholder="Categoria"
+          [(ngModel)]="veiculo.categoria" name="categoria">
+          <ly-option value="PASSEIO">Passeio</ly-option>
+          <ly-option value="SUV">SUV</ly-option>
+          <ly-option value="CAMINHONET">Caminhonet</ly-option>
+          <ly-option value="ONIBUS">Onibus</ly-option>
+          <ly-option value="CAMINHAO">Caminhao</ly-option>
+          <ly-option value="VAN">Van</ly-option>
+        </ly-select>
+      </ly-field>
+    </form>
+  </ly-card-content>
+  <ly-card-actions>
+    <button ly-button outlined color="primary" (click)="createVeiculo()">
+      <ly-icon [withClass]="classes.icon">create</ly-icon>
+    </button>
+    <button ly-button outlined color="warn" (click)="cancel()">
+      <ly-icon [withClass]="classes.icon">cancel</ly-icon>
+    </button>
+  </ly-card-actions>
+</ly-card>

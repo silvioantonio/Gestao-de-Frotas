@@ -1,0 +1,10 @@
+
+.footer {
+  text-decoration: aliceblue;
+  background-color: rgb(17, 148, 115);
+  clear: both;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
