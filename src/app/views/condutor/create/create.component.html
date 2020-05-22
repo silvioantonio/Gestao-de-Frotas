@@ -1,1 +1,53 @@
-<p>create works!</p>
+<ly-card>
+  <ly-card-content>
+    <h2 lyTyp="headline" gutterBottom>Novo Veiculo</h2>
+    <form>
+      <ly-field>
+        <input lyNativeControl placeholder="Nome" [(ngModel)]="condutor.nome" name="nome">
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="CPF" [(ngModel)]="condutor.cpf" name="cpf">
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Matricula" [(ngModel)]="condutor.matricula" name="matricula">
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="CNH" [(ngModel)]="condutor.numeroCNH" name="numeroCNH">
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Validade" [(ngModel)]="condutor.validade" name="validade">
+      </ly-field>
+      <ly-field appearance="outlined">
+        <ly-label>Categoria CNH</ly-label>
+        <ly-select placeholder="Categoria"
+          [(ngModel)]="condutor.categoriaCnh" name="categoriaCnh">
+          <ly-option value="A">A</ly-option>
+          <ly-option value="B">B</ly-option>
+          <ly-option value="C">C</ly-option>
+          <ly-option value="D">D</ly-option>
+          <ly-option value="E">E</ly-option>
+        </ly-select>
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Cidade" [(ngModel)]="condutor.cidade" name="cidade">
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Bairro" [(ngModel)]="condutor.bairro" name="bairro">
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Complemento" [(ngModel)]="condutor.complemento" name="complemento">
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Numero" [(ngModel)]="condutor.numero" name="numero">
+      </ly-field>
+    </form>
+  </ly-card-content>
+  <ly-card-actions>
+    <button ly-button outlined color="primary" (click)="createCondutor()">
+      <ly-icon [withClass]="classes.icon">create</ly-icon>
+    </button>
+    <button ly-button outlined color="warn" (click)="cancel()">
+      <ly-icon [withClass]="classes.icon">cancel</ly-icon>
+    </button>
+  </ly-card-actions>
+</ly-card>
