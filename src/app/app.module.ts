@@ -43,6 +43,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { UpdateComponent } from './views/veiculo/update/update.component';
 import { DeleteComponent } from './views/veiculo/delete/delete.component';
+import { CondutorComponent } from './views/condutor/condutor.component';
+import { ReadCondutorComponent } from './views/condutor/read/read.component';
+import { CreateCondutorComponent } from './views/condutor/create/create.component';
+import { UpdateCondutorComponent } from './views/condutor/update/update.component';
+import { DeleteCondutorComponent } from './views/condutor/delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +61,11 @@ import { DeleteComponent } from './views/veiculo/delete/delete.component';
     ReadComponent,
     UpdateComponent,
     DeleteComponent,
+    CondutorComponent,
+    CreateCondutorComponent,
+    ReadCondutorComponent,
+    UpdateCondutorComponent,
+    DeleteCondutorComponent,
   ],
   imports: [
     BrowserModule,
