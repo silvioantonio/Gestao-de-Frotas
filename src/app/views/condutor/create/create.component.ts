@@ -21,13 +21,16 @@ export class CreateCondutorComponent implements OnInit {
     nome: '',
     cpf: '',
     matricula: null,
-    numeroCNH: null,
-    validade: '',
-    categoriaCnh: '',
-    cidade: '',
-    bairro: '',
-    complemento: '',
-    numero: ''
+    cnh:{
+      numeroCNH: null,
+      validade: '',
+      categoriaCnh: ''},
+    endereco:{
+      cidade: '',
+      bairro: '',
+      complemento: '',
+      numero: ''}
+
   }
 
   readonly classes = this._theme.addStyleSheet(STYLES);

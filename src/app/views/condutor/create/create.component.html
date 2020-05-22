@@ -12,15 +12,15 @@
         <input lyNativeControl placeholder="Matricula" [(ngModel)]="condutor.matricula" name="matricula">
       </ly-field>
       <ly-field>
-        <input lyNativeControl placeholder="CNH" [(ngModel)]="condutor.numeroCNH" name="numeroCNH">
+        <input lyNativeControl placeholder="CNH" [(ngModel)]="condutor.cnh.numeroCNH" name="numeroCNH">
       </ly-field>
       <ly-field>
-        <input lyNativeControl placeholder="Validade" [(ngModel)]="condutor.validade" name="validade">
+        <input lyNativeControl placeholder="Validade" [(ngModel)]="condutor.cnh.validade" name="validade">
       </ly-field>
       <ly-field appearance="outlined">
         <ly-label>Categoria CNH</ly-label>
         <ly-select placeholder="Categoria"
-          [(ngModel)]="condutor.categoriaCnh" name="categoriaCnh">
+          [(ngModel)]="condutor.cnh.categoriaCnh" name="categoriaCnh">
           <ly-option value="A">A</ly-option>
           <ly-option value="B">B</ly-option>
           <ly-option value="C">C</ly-option>
@@ -29,16 +29,16 @@
         </ly-select>
       </ly-field>
       <ly-field>
-        <input lyNativeControl placeholder="Cidade" [(ngModel)]="condutor.cidade" name="cidade">
+        <input lyNativeControl placeholder="Cidade" [(ngModel)]="condutor.endereco.cidade" name="cidade">
       </ly-field>
       <ly-field>
-        <input lyNativeControl placeholder="Bairro" [(ngModel)]="condutor.bairro" name="bairro">
+        <input lyNativeControl placeholder="Bairro" [(ngModel)]="condutor.endereco.bairro" name="bairro">
       </ly-field>
       <ly-field>
-        <input lyNativeControl placeholder="Complemento" [(ngModel)]="condutor.complemento" name="complemento">
+        <input lyNativeControl placeholder="Complemento" [(ngModel)]="condutor.endereco.complemento" name="complemento">
       </ly-field>
       <ly-field>
-        <input lyNativeControl placeholder="Numero" [(ngModel)]="condutor.numero" name="numero">
+        <input lyNativeControl placeholder="Numero" [(ngModel)]="condutor.endereco.numero" name="numero">
       </ly-field>
     </form>
   </ly-card-content>
