@@ -33,7 +33,9 @@ export class ReadCondutorComponent implements OnInit {
   ngOnInit(): void {
     this.condutorService.read().subscribe(res => {
       this.condutores = res["content"]
-      console.log(res["content"])
+
+      console.log(this.condutores)
+
     })
   }
 

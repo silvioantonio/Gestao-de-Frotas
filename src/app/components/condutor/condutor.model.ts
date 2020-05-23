@@ -13,7 +13,7 @@ export interface Condutor {
     cidade: string
     bairro: string
     complemento: string
-    numero: string
+    numero: number
   }
 
 }

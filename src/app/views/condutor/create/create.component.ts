@@ -29,7 +29,7 @@ export class CreateCondutorComponent implements OnInit {
       cidade: '',
       bairro: '',
       complemento: '',
-      numero: ''}
+      numero: null}
 
   }
 
