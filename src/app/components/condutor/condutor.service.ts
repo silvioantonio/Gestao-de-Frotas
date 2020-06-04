@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Condutor } from './condutor.model';
 import { Observable } from 'rxjs';
 
@@ -29,19 +29,8 @@ export class CondutorService {
   }
 
   read(): Observable<Condutor[]> {
-
-    var query = location.search.slice(1);
-    var partes = query.split('&');
-    var data = {};
-    partes.forEach(function (parte) {
-      var chaveValor = parte.split('=');
-      var chave = chaveValor[0];
-      var valor = chaveValor[1];
-      data[chave] = valor;
-    });
-
-    const url = `${this.baseUrl}?pageNumber=${data["pageNumber"]}&pageSize=${data["pageSize"]}`;
-    return this.http.get<Condutor[]>(url)
+    const opts = { params: new HttpParams({ fromString: "pageNumber=0&pageSize=20"}) }
+    return this.http.get<Condutor[]>(this.baseUrl, opts)
   }
 
   readById(id: string): Observable<Condutor> {
