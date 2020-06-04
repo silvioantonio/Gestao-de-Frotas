@@ -9,7 +9,8 @@ import { Observable } from 'rxjs';
 })
 export class CondutorService {
 
-  baseUrl = 'http://localhost:8080/condutores'
+  //baseUrl = 'http://localhost:8080/condutores'
+  baseUrl = 'https://gestao-de-frotas-backend.herokuapp.com/condutores'
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 

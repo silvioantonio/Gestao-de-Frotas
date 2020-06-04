@@ -9,7 +9,8 @@ import { Observable } from 'rxjs';
 })
 export class VeiculoService {
 
-  baseUrl = 'http://localhost:8080/veiculos'
+  //baseUrl = 'http://localhost:8080/veiculos'
+  baseUrl = 'https://gestao-de-frotas-backend.herokuapp.com/veiculos'
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
