@@ -1,3 +1,8 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fccd326e-df9b-4f3c-8d06-1322c6b272e4/deploy-status)](https://app.netlify.com/sites/gestao-de-frotas/deploys)
+
+## Site
+[Gestao de Frotas](https://gestao-de-frotas.netlify.app/)
+
 # Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
