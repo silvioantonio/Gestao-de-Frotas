@@ -29,7 +29,7 @@ export class CondutorService {
   }
 
   read(): Observable<Condutor[]> {
-    const opts = { params: new HttpParams({ fromString: "pageNumber=0&pageSize=20"}) }
+    const opts = { params: new HttpParams({ fromString: `pageNumber=${0}&pageSize=${20}`}) }
     return this.http.get<Condutor[]>(this.baseUrl, opts)
   }
 
