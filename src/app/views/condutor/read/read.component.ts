@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { LyTheme2, ThemeVariables } from '@alyle/ui';
 import { LyIconService } from '@alyle/ui/icon';
@@ -27,6 +28,7 @@ export class ReadCondutorComponent implements OnInit {
   ]
 
   constructor(
+    private http: HttpClient,
     private condutorService: CondutorService,
     private _theme: LyTheme2,
     icon: LyIconService) { }
@@ -39,5 +41,4 @@ export class ReadCondutorComponent implements OnInit {
 
     })
   }
-
 }

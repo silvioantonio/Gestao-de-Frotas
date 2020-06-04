@@ -14,6 +14,7 @@ export class CondutorService {
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
+
   showMessage(msg: string): void {
     this.snackBar.open(msg, 'X', {
       duration: 3000,
@@ -27,8 +28,19 @@ export class CondutorService {
     return this.http.post<Condutor>(this.baseUrl, condutor)
   }
 
-  read(pageNumber: number, pageSize: number): Observable<Condutor[]> {
-    const url = `${this.baseUrl}?pageNumber=${pageNumber}&pageSize=${pageSize}`;
+  read(): Observable<Condutor[]> {
+
+    var query = location.search.slice(1);
+    var partes = query.split('&');
+    var data = {};
+    partes.forEach(function (parte) {
+      var chaveValor = parte.split('=');
+      var chave = chaveValor[0];
+      var valor = chaveValor[1];
+      data[chave] = valor;
+    });
+
+    const url = `${this.baseUrl}?pageNumber=${data["pageNumber"]}&pageSize=${data["pageSize"]}`;
     return this.http.get<Condutor[]>(url)
   }
 
