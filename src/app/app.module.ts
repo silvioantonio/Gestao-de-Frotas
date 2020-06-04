@@ -49,6 +49,9 @@ import { CreateCondutorComponent } from './views/condutor/create/create.componen
 import { UpdateCondutorComponent } from './views/condutor/update/update.component';
 import { DeleteCondutorComponent } from './views/condutor/delete/delete.component';
 
+import { OrdemComponent } from './views/ordemtrafego/ordem.component';
+import { ReadOrdemComponent } from './views/ordemtrafego/read/read.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,6 +69,8 @@ import { DeleteCondutorComponent } from './views/condutor/delete/delete.componen
     ReadCondutorComponent,
     UpdateCondutorComponent,
     DeleteCondutorComponent,
+    OrdemComponent,
+    ReadOrdemComponent
   ],
   imports: [
     BrowserModule,
@@ -94,7 +99,7 @@ import { DeleteCondutorComponent } from './views/condutor/delete/delete.componen
     NoopAnimationsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
   ],
   providers: [StyleRenderer, LyTheme2,
     { provide: LY_THEME_NAME, useValue: 'minima-dark' },

@@ -20,6 +20,7 @@ export class ReadCondutorComponent implements OnInit {
   readonly classes = this._theme.addStyleSheet(STYLES);
 
   condutores: Condutor[] = []
+
   displayedColumns = [
     'nome', 'cpf', 'matricula', 'numeroCNH', 'validade', 'categoriaCnh',
     'cidade', 'bairro', 'complemento','numero','action'

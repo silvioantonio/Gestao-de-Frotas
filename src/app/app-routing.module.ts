@@ -12,6 +12,7 @@ import { CreateCondutorComponent } from './views/condutor/create/create.componen
 import { UpdateCondutorComponent } from './views/condutor/update/update.component';
 import { DeleteCondutorComponent } from './views/condutor/delete/delete.component';
 
+import { OrdemComponent } from './views/ordemtrafego/ordem.component';
 
 const routes: Routes = [{
   path: "veiculos",
@@ -43,6 +44,10 @@ const routes: Routes = [{
 {
   path: "condutor/delete/:id",
   component: DeleteCondutorComponent
+},
+{
+  path: "ordem",
+  component: OrdemComponent
 }
 ];
 

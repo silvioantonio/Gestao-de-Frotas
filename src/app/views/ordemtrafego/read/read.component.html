@@ -1,0 +1,81 @@
+<ly-card>
+  <ly-card-content>
+
+    <mat-form-field>
+      <mat-label>Filter</mat-label>
+      <input matInput [(ngModel)]="nome" (input)="evento()" placeholder="Ex. ium">
+    </mat-form-field>
+
+    <table mat-table class="full-width-table" matSort>
+      <!-- Id Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+        <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="origem">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Origem</th>
+        <td mat-cell *matCellDef="let row">{{ row.origem }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="destino">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Destino</th>
+        <td mat-cell *matCellDef="let row">{{ row.destino }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="veiculo">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Veiculo</th>
+        <td mat-cell *matCellDef="let row">{{ row.veiculo.placa }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="condutor">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Condutor</th>
+        <td mat-cell *matCellDef="let row">{{ row.condutor.nome }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="dataDaViagem">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Data Da Viagem</th>
+        <td mat-cell *matCellDef="let row">{{ row.dataDaViagem }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="horaDaViagem">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Hora Da Viagem</th>
+        <td mat-cell *matCellDef="let row">{{ row.horaDaViagem }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+        <td mat-cell *matCellDef="let row">{{ row.status }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="distanciaPercorrida">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Distancia Percorrida</th>
+        <td mat-cell *matCellDef="let row">{{ row.distanciaPercorrida }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Ações</th>
+        <td class="action" mat-cell *matCellDef="let row">
+          <a class="edit" routerLink="/condutor/update/{{ row.id }}">
+            <ly-icon color="primary">edit_outline</ly-icon>
+          </a>
+          <a class="delete" routerLink="/condutor/delete/{{ row.id }}">
+            <ly-icon color="warn">delete_outline</ly-icon>
+          </a>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <mat-paginator
+      #paginator
+      [length]="dataSource?.data.length"
+      [pageIndex]="0"
+      [pageSize]="5"
+      [pageSizeOptions]="[5, 10, 20, 25]"
+    >
+    </mat-paginator>
+  </ly-card-content>
+</ly-card>
