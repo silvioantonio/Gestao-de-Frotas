@@ -27,8 +27,9 @@ export class CondutorService {
     return this.http.post<Condutor>(this.baseUrl, condutor)
   }
 
-  read(): Observable<Condutor[]> {
-    return this.http.get<Condutor[]>(this.baseUrl)
+  read(pageNumber: number, pageSize: number): Observable<Condutor[]> {
+    const url = `${this.baseUrl}?pageNumber=${pageNumber}&pageSize=${pageSize}`;
+    return this.http.get<Condutor[]>(url)
   }
 
   readById(id: string): Observable<Condutor> {
