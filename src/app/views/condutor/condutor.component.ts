@@ -1,3 +1,4 @@
+import { ExportaService } from './../../components/util/exporta.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class CondutorComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private exportaService: ExportaService) { }
 
   ngOnInit(): void {
   }
@@ -16,5 +17,7 @@ export class CondutorComponent implements OnInit {
   navigateToCondutorCreate(): void {
     this.router.navigate(['/condutor/create'])
   }
+
+  export(): void{ this.exportaService.converteParaCSV('tabela-condutor', 'Tabela-Condutor') }
 
 }

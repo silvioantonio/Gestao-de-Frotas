@@ -1,6 +1,9 @@
 <div style="position: relative; width: 75%; height: 90%; float: left;">
-  <button ly-button outlined color="primary" (click)="navigateToCondutorCreate()">
-    Novo Condutor
-  </button>
+  <div class="container">
+    <button ly-button outlined color="primary" (click)="navigateToCondutorCreate()">
+      Novo Condutor
+    </button>
+    <button ly-button raised bg="primary" (click)="export()"><ly-icon>save_alt</ly-icon></button>
+  </div>
   <app-read-condutor></app-read-condutor>
 </div>

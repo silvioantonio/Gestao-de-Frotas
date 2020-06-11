@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ExportaService } from 'src/app/components/util/exporta.service';
 
 @Component({
   selector: 'app-veiculo',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class VeiculoComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,  private exportaService: ExportaService) { }
 
   ngOnInit(): void {
   }
@@ -16,5 +17,8 @@ export class VeiculoComponent implements OnInit {
   navigateToVeiculoCreate(): void {
     this.router.navigate(['/veiculos/create'])
   }
+
+
+  export(): void{ this.exportaService.converteParaCSV('tabela-veiculo', 'Tabela-Condutor') }
 
 }
