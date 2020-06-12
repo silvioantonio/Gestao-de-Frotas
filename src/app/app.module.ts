@@ -52,8 +52,6 @@ import { DeleteCondutorComponent } from './views/condutor/delete/delete.componen
 import { OrdemComponent } from './views/ordemtrafego/ordem.component';
 import { ReadOrdemComponent } from './views/ordemtrafego/read/read.component';
 import { CreateOrdemComponent } from './views/ordemtrafego/create/create.component';
-import { UpdateOrdemComponent } from './views/ordemtrafego/update/update.component';
-import { DeleteOrdemComponent } from './views/ordemtrafego/delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -75,8 +73,6 @@ import { DeleteOrdemComponent } from './views/ordemtrafego/delete/delete.compone
     OrdemComponent,
     ReadOrdemComponent,
     CreateOrdemComponent,
-    UpdateOrdemComponent,
-    DeleteOrdemComponent
   ],
   imports: [
     BrowserModule,

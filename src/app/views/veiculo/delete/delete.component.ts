@@ -32,7 +32,7 @@ export class DeleteComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
-    this.veiculoService.readById(id).subscribe( veiculo => {
+    this.veiculoService.readById(parseInt(id)).subscribe( veiculo => {
       this.veiculo = veiculo;
     });
   }

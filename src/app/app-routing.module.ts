@@ -1,4 +1,3 @@
-import { CreateOrdemComponent } from './views/ordemtrafego/create/create.component';
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -14,6 +13,7 @@ import { UpdateCondutorComponent } from './views/condutor/update/update.componen
 import { DeleteCondutorComponent } from './views/condutor/delete/delete.component';
 
 import { OrdemComponent } from './views/ordemtrafego/ordem.component';
+import { CreateOrdemComponent } from './views/ordemtrafego/create/create.component';
 
 const routes: Routes = [{
   path: "veiculos",
@@ -53,14 +53,6 @@ const routes: Routes = [{
 {
   path: "ordem/create",
   component: CreateOrdemComponent
-},
-{
-  path: "ordem/delete:id",
-  component: DeleteOrdemComponent
-},
-{
-  path: "ordem/update/:id",
-  component: UpdateOrdemComponent
 }
 ];
 
