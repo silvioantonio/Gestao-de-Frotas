@@ -73,7 +73,7 @@ export class CreateOrdemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createCondutor(): void {
+  createOrdem(): void {
     this.ordemService.create( () => {
       let condutor: Condutor;
       let veiculo: Veiculo;
