@@ -38,6 +38,11 @@ export class CondutorService {
     return this.http.get<Condutor>(url)
   }
 
+  readByMatricula(matricula: number): Observable<Condutor> {
+    const url = `${this.baseUrl}/matricula/${matricula}`
+    return this.http.get<Condutor>(url);
+  }
+
   update(condutor: Condutor): Observable<Condutor> {
     return this.http.put<Condutor>(this.baseUrl, condutor)
   }

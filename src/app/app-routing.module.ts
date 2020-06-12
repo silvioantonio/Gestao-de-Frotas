@@ -1,3 +1,4 @@
+import { CreateOrdemComponent } from './views/ordemtrafego/create/create.component';
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -48,6 +49,18 @@ const routes: Routes = [{
 {
   path: "ordem",
   component: OrdemComponent
+},
+{
+  path: "ordem/create",
+  component: CreateOrdemComponent
+},
+{
+  path: "ordem/delete:id",
+  component: DeleteOrdemComponent
+},
+{
+  path: "ordem/update/:id",
+  component: UpdateOrdemComponent
 }
 ];
 

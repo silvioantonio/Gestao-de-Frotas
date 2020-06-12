@@ -1,0 +1,47 @@
+<ly-card>
+  <ly-card-content>
+    <h2 lyTyp="headline" gutterBottom>Nova Ordem de Trafego</h2>
+    <form>
+      <ly-field>
+        <input lyNativeControl placeholder="Origem" [(ngModel)]="ordem.origem" name="origem">
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Destino" [(ngModel)]="ordem.destino" name="destino">
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Data da Viagem" [(ngModel)]="ordem.dataDaViagem" name="dataDaViagem">
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Hora da Viagem" [(ngModel)]="ordem.horaDaViagem" name="horaDaViagem">
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Status" [(ngModel)]="ordem.status" name="status">
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Distancia Percorrida" [(ngModel)]="ordem.distanciaPercorrida" name="distanciaPercorrida">
+      </ly-field>
+      <ly-field appearance="outlined">
+        <ly-label>Status</ly-label>
+        <ly-select placeholder="Status"
+          [(ngModel)]="ordem.status" name="status">
+          <ly-option value="ATIVO">Ativo</ly-option>
+          <ly-option value="INATIVO">Inativo</ly-option>
+        </ly-select>
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="Matricula do condutor" [(ngModel)]="ordem.condutor.matricula" name="matricula">
+      </ly-field>
+      <ly-field>
+        <input lyNativeControl placeholder="ID do Veiculo" [(ngModel)]="ordem.veiculo.id" name="id">
+      </ly-field>
+    </form>
+  </ly-card-content>
+  <ly-card-actions>
+    <button ly-button outlined color="primary" (click)="createCondutor()">
+      <ly-icon [withClass]="classes.icon">create</ly-icon>
+    </button>
+    <button ly-button outlined color="warn" (click)="cancel()">
+      <ly-icon [withClass]="classes.icon">cancel</ly-icon>
+    </button>
+  </ly-card-actions>
+</ly-card>

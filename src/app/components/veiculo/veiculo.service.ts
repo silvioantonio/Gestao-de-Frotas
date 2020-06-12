@@ -31,7 +31,7 @@ export class VeiculoService {
     return this.http.get<Veiculo[]>(this.baseUrl)
   }
 
-  readById(id: string): Observable<Veiculo> {
+  readById(id: number): Observable<Veiculo> {
     const url = `${this.baseUrl}/${id}`
     return this.http.get<Veiculo>(url)
   }

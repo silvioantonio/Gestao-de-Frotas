@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class OrdemService {
 
   //baseUrl = 'http://localhost:8080/ordemtrafego'
-  baseUrl = 'https://gestao-de-frotas-backend.herokuapp.com/ordemtrafego'
+  private baseUrl = 'https://gestao-de-frotas-backend.herokuapp.com/ordemtrafego'
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
@@ -23,7 +23,7 @@ export class OrdemService {
   }
 
   // interage com o backend
-  create(ordem: Ordem): Observable<Ordem> {
+  create(ordem:()=> Ordem): Observable<Ordem> {
     return this.http.post<Ordem>(this.baseUrl, ordem)
   }
 
