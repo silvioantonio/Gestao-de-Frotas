@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Ordem } from './ordem.model';
 import { Observable } from 'rxjs';
 
@@ -23,12 +23,13 @@ export class OrdemService {
   }
 
   // interage com o backend
-  create(ordem:()=> Ordem): Observable<Ordem> {
+  create(ordem: Ordem): Observable<Ordem> {
     return this.http.post<Ordem>(this.baseUrl, ordem)
   }
 
   read(): Observable<Ordem[]> {
-    return this.http.get<Ordem[]>(this.baseUrl)
+    const opts = { params: new HttpParams({ fromString: `pageNumber=${0}&pageSize=${20}`}) }
+    return this.http.get<Ordem[]>(this.baseUrl, opts)
   }
 
   readById(id: string): Observable<Ordem> {

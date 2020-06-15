@@ -74,18 +74,16 @@ export class CreateOrdemComponent implements OnInit {
   }
 
   createOrdem(): void {
-    this.ordemService.create( () => {
-      let condutor: Condutor;
-      let veiculo: Veiculo;
+    let condutor: Condutor;
+    let veiculo: Veiculo;
 
-      this.condutorService.readByMatricula(this.ordem.condutor.matricula).subscribe( res => {condutor = res} );
-      this.veiculoService.readById(this.ordem.veiculo.id).subscribe( res => {veiculo = res} );
+    this.condutorService.readByMatricula(this.ordem.condutor.matricula).subscribe( res => { condutor = res} );
+    this.veiculoService.readByPlaca(this.ordem.veiculo.placa).subscribe( res => { veiculo = res} );
 
-      this.ordem.condutor = condutor;
-      this.ordem.veiculo = veiculo;
+    this.ordem.condutor = condutor;
+    this.ordem.veiculo = veiculo;
 
-      return this.ordem;
-    }).subscribe( () => {
+    this.ordemService.create(this.ordem).subscribe( () => {
       this.ordemService.showMessage('Ordem de Trafego cadastrado!')
       this.router.navigate(['/ordem'])
     });

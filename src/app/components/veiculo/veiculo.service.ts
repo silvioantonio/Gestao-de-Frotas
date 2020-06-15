@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Veiculo } from './veiculo.model';
 import { Observable } from 'rxjs';
 
@@ -28,12 +28,18 @@ export class VeiculoService {
   }
 
   read(): Observable<Veiculo[]> {
-    return this.http.get<Veiculo[]>(this.baseUrl)
+    const opts = { params: new HttpParams({ fromString: `pageNumber=${0}&pageSize=${20}`}) }
+    return this.http.get<Veiculo[]>(this.baseUrl, opts)
   }
 
   readById(id: number): Observable<Veiculo> {
     const url = `${this.baseUrl}/${id}`
     return this.http.get<Veiculo>(url)
+  }
+
+  readByPlaca(placa: string): Observable<Veiculo> {
+    const url = `${this.baseUrl}/placa/${placa}`
+    return this.http.get<Veiculo>(url);
   }
 
   update(veiculo: Veiculo): Observable<Veiculo> {

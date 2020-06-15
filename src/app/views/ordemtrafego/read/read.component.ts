@@ -33,7 +33,7 @@ export class ReadOrdemComponent implements AfterViewInit, OnInit {
 
   nome: string;
 
-  displayedColumns = ['id', 'origem', 'destino', 'veiculo', 'condutor', 'dataDaViagem', 'horaDaViagem',
+  displayedColumns = ['id', 'origem', 'destino', 'dataDaViagem', 'horaDaViagem',
                       'status', 'distanciaPercorrida','action'];
 
   constructor(
