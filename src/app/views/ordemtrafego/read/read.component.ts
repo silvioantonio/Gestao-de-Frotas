@@ -34,7 +34,7 @@ export class ReadOrdemComponent implements AfterViewInit, OnInit {
   nome: string;
 
   displayedColumns = ['id', 'origem', 'destino', 'dataDaViagem', 'horaDaViagem',
-                      'status', 'distanciaPercorrida','action'];
+                      'status', 'distanciaPercorrida', 'nomeCondutor','action'];
 
   constructor(
     private ordemService: OrdemService,
