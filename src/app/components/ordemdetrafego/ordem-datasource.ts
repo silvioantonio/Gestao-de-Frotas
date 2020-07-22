@@ -66,7 +66,12 @@ export class OrdemDataSource extends DataSource<Ordem> {
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-        case 'nome': return compare(a.condutor.nome, b.condutor.nome, isAsc);
+        case 'origem': return compare(a.origem, b.origem, isAsc);
+        case 'destino': return compare(a.destino, b.destino, isAsc);
+        case 'dataDaViagem': return compare(a.dataDaViagem, b.dataDaViagem, isAsc);
+        case 'horaDaViagem': return compare(a.horaDaViagem, b.horaDaViagem, isAsc);
+        case 'status': return compare(a.status, b.status, isAsc);
+        case 'distanciaPercorrida': return compare(a.distanciaPercorrida, b.distanciaPercorrida, isAsc);
         case 'id': return compare(+a.id, +b.id, isAsc);
         default: return 0;
       }

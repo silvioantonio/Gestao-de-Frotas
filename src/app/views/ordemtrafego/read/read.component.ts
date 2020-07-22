@@ -8,8 +8,6 @@ import { LyIconService } from '@alyle/ui/icon';
 import { Ordem } from "../../../components/ordemdetrafego/ordem.model";
 import { OrdemService } from "../../../components/ordemdetrafego/ordem.service";
 
-import {MatTableDataSource} from '@angular/material/table';
-
 const STYLES = (_theme: ThemeVariables) => ({
   icon: {
     marginAfter: '.5em'
@@ -31,10 +29,7 @@ export class ReadOrdemComponent implements AfterViewInit, OnInit {
 
   dataSource: OrdemDataSource;
 
-  nome: string;
-
-  displayedColumns = ['id', 'origem', 'destino', 'dataDaViagem', 'horaDaViagem',
-                      'status', 'distanciaPercorrida', 'nomeCondutor','action'];
+  displayedColumns = ['id', 'origem', 'destino', 'dataDaViagem', 'horaDaViagem', 'status', 'distanciaPercorrida', 'action'];
 
   constructor(
     private ordemService: OrdemService,
@@ -54,13 +49,10 @@ export class ReadOrdemComponent implements AfterViewInit, OnInit {
     });
   }
 
-  evento() {
-    if(this.nome != "") {
-      this.dataSource.data = this.dataSource.data.filter(res => {
-        return res.condutor.nome.toLowerCase().match(this.nome.trim().toLowerCase());
-      });
-      this.table.dataSource = this.dataSource.data;
-    } else if(this.nome == "") {
+  evento(option: string) {
+    if(this[option] != '') {
+      this.table.dataSource = this.dataSource.data.filter(res => res[option].toLowerCase().match(this[option].trim().toLowerCase()));
+    } else if(this[option] == ''){
       this.ngOnInit();
       this.ngAfterViewInit();
     }
