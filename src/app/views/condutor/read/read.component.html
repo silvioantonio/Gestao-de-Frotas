@@ -11,6 +11,16 @@
       <input [ngStyle]="{'color': 'white'}" matInput [(ngModel)]="cpf" (input)="evento('cpf')">
     </mat-form-field>
 
+    <mat-form-field>
+      <mat-label [ngStyle]="{'color': 'white'}">Matricula</mat-label>
+      <input [ngStyle]="{'color': 'white'}" matInput [(ngModel)]="matricula" (input)="evento('matricula')">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label [ngStyle]="{'color': 'white'}">CNH</mat-label>
+      <input [ngStyle]="{'color': 'white'}" matInput [(ngModel)]="cnh" (input)="evento('cnh')">
+    </mat-form-field>
+
     <table mat-table class="full-width-table" matSort>
       <ng-container matColumnDef="nome">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Nome</th>

@@ -29,6 +29,8 @@ export class ReadCondutorComponent implements AfterViewInit,OnInit {
   dataSource: CondutorDataSource;
   nome: string;
   cpf: string;
+  matricula: number;
+  cnh:number;
 
   displayedColumns = ['nome', 'cpf', 'matricula', 'numeroCNH', 'validade', 'categoriaCnh', 'cidade', 'bairro', 'complemento','numero','action']
 
@@ -45,9 +47,14 @@ export class ReadCondutorComponent implements AfterViewInit,OnInit {
       });
     }
 
-    evento(option: string) {
+    evento(option: any) {
       if(this[option] != '') {
-        this.table.dataSource = this.dataSource.data.filter(res => res[option].toLowerCase().match(this[option].trim().toLowerCase()));
+        this.table.dataSource = this.dataSource.data.filter(res => {
+          if(typeof res[option] == 'string')
+            return res[option].toLowerCase().match(this[option].trim().toLowerCase())
+          else
+            return res[option].toString().match(this[option].toString().trim())
+        });
       } else if(this[option] == ''){
         this.ngOnInit();
         this.ngAfterViewInit();
