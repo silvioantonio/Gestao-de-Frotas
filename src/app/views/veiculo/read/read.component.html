@@ -6,7 +6,27 @@
       <input [ngStyle]="{'color': 'white'}" matInput [(ngModel)]="placa" (input)="evento('placa')">
     </mat-form-field>
 
-  <table mat-table class="full-width-table" matSort>
+    <mat-form-field>
+      <mat-label [ngStyle]="{'color': 'white'}">KM</mat-label>
+      <input [ngStyle]="{'color': 'white'}" matInput [(ngModel)]="km" (input)="evento('km')">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label [ngStyle]="{'color': 'white'}">Modelo</mat-label>
+      <input [ngStyle]="{'color': 'white'}" matInput [(ngModel)]="modelo" (input)="evento('modelo')">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label [ngStyle]="{'color': 'white'}">Marca</mat-label>
+      <input [ngStyle]="{'color': 'white'}" matInput [(ngModel)]="marca" (input)="evento('marca')">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label [ngStyle]="{'color': 'white'}">Est Conserv</mat-label>
+      <input [ngStyle]="{'color': 'white'}" matInput [(ngModel)]="estadoConservacao" (input)="evento('estadoConservacao')">
+    </mat-form-field>
+
+  <table mat-table id='tabela-veiculo' class="full-width-table" matSort>
 
     <ng-container matColumnDef="modelo">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Modelo</th>

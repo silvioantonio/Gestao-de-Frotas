@@ -29,6 +29,10 @@ export class ReadComponent implements AfterViewInit,OnInit {
 
   dataSource: ReadDataSource;
   placa: string;
+  km: number;
+  modelo: string;
+  marca: string;
+  estadoConservacao: string;
 
   displayedColumns = ['modelo', 'placa', 'cor', 'km', 'anoFabricacao', 'marca', 'categoria', 'tipoCombustivel', 'estadoConservacao','action']
 
@@ -45,9 +49,14 @@ export class ReadComponent implements AfterViewInit,OnInit {
     });
   }
 
-  evento(option: string) {
+  evento(option: any) {
     if(this[option] != '') {
-      this.table.dataSource = this.dataSource.data.filter(res => res[option].toLowerCase().match(this[option].trim().toLowerCase()));
+      this.table.dataSource = this.dataSource.data.filter(res => {
+        if(typeof res[option] == 'string')
+          return res[option].toLowerCase().match(this[option].trim().toLowerCase())
+        else
+          return res[option].toString().match(this[option].toString().trim())
+      });
     } else if(this[option] == ''){
       this.ngOnInit();
       this.ngAfterViewInit();

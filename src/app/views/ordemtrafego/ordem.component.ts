@@ -18,6 +18,6 @@ export class OrdemComponent implements OnInit {
   }
 
 
-  export(): void{ this.exportaService.converteParaCSV('tabela-ordem-de-trafego', 'Tabela-Condutor') }
+  export(): void{ this.exportaService.converteParaCSV('tabela-ordem-trafego', 'Tabela-Ordem-Trafego') }
 
 }

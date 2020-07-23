@@ -11,7 +11,7 @@
       <input [ngStyle]="{'color': 'white'}" matInput [(ngModel)]="destino" (input)="evento('destino')">
     </mat-form-field>
 
-    <table mat-table class="full-width-table" matSort>
+    <table mat-table id='tabela-ordem-trafego' class="full-width-table" matSort>
       <!-- Id Column -->
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>

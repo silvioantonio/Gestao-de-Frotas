@@ -19,6 +19,6 @@ export class VeiculoComponent implements OnInit {
   }
 
 
-  export(): void{ this.exportaService.converteParaCSV('tabela-veiculo', 'Tabela-Condutor') }
+  export(): void{ this.exportaService.converteParaCSV('tabela-veiculo', 'Tabela-Veiculo') }
 
 }

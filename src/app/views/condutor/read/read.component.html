@@ -21,7 +21,7 @@
       <input [ngStyle]="{'color': 'white'}" matInput [(ngModel)]="cnh" (input)="evento('cnh')">
     </mat-form-field>
 
-    <table mat-table class="full-width-table" matSort>
+    <table mat-table id='tabela-condutor' class="full-width-table" matSort>
       <ng-container matColumnDef="nome">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Nome</th>
         <td mat-cell *matCellDef="let row">{{ row.nome }}</td>
