@@ -1,6 +1,12 @@
 <ly-card>
   <ly-card-content>
-  <table mat-table  [dataSource]="veiculos" class="full-width-table" matSort>
+
+    <mat-form-field>
+      <mat-label [ngStyle]="{'color': 'white'}">Placa</mat-label>
+      <input [ngStyle]="{'color': 'white'}" matInput [(ngModel)]="placa" (input)="evento('placa')">
+    </mat-form-field>
+
+  <table mat-table class="full-width-table" matSort>
 
     <ng-container matColumnDef="modelo">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Modelo</th>
@@ -48,7 +54,7 @@
     </ng-container>
 
     <ng-container matColumnDef="action">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Ações</th>
+      <th mat-header-cell *matHeaderCellDef>Ações</th>
       <td  class="action" mat-cell *matCellDef="let row">
         <a class="edit" routerLink="/veiculos/update/{{ row.id }}">
             <ly-icon color="primary">edit_outline</ly-icon>

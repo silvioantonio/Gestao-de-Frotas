@@ -11,7 +11,7 @@
       <input [ngStyle]="{'color': 'white'}" matInput [(ngModel)]="cpf" (input)="evento('cpf')">
     </mat-form-field>
 
-    <table mat-table [dataSource]="dataSource" id="tabela-condutor" class="full-width-table" matSort>
+    <table mat-table class="full-width-table" matSort>
       <ng-container matColumnDef="nome">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Nome</th>
         <td mat-cell *matCellDef="let row">{{ row.nome }}</td>
@@ -53,12 +53,12 @@
       </ng-container>
 
       <ng-container matColumnDef="complemento">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Complemento</th>
+        <th mat-header-cell *matHeaderCellDef>Complemento</th>
         <td mat-cell *matCellDef="let row">{{ row.endereco.complemento }}</td>
       </ng-container>
 
       <ng-container matColumnDef="numero">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Numero</th>
+        <th mat-header-cell *matHeaderCellDef>Numero</th>
         <td mat-cell *matCellDef="let row">{{ row.endereco.numero }}</td>
       </ng-container>
 
