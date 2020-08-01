@@ -1,6 +1,8 @@
-
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+import { ContentComponent } from './components/template/content/content.component';
+import { LoginComponent } from './components/login/login.component';
 
 import { VeiculoComponent} from './views/veiculo/veiculo.component'
 import { CreateComponent } from './views/veiculo/create/create.component';
@@ -15,45 +17,19 @@ import { DeleteCondutorComponent } from './views/condutor/delete/delete.componen
 import { OrdemComponent } from './views/ordemtrafego/ordem.component';
 import { CreateOrdemComponent } from './views/ordemtrafego/create/create.component';
 
-const routes: Routes = [{
-  path: "veiculos",
-  component: VeiculoComponent
-},
-{
-  path: "veiculos/create",
-  component: CreateComponent
-},
-{
-  path: "veiculos/update/:id",
-  component: UpdateComponent
-},
-{
-  path: "veiculos/delete/:id",
-  component: DeleteComponent
-},{
-  path: "condutor",
-  component: CondutorComponent
-},
-{
-  path: "condutor/create",
-  component: CreateCondutorComponent
-},
-{
-  path: "condutor/update/:id",
-  component: UpdateCondutorComponent
-},
-{
-  path: "condutor/delete/:id",
-  component: DeleteCondutorComponent
-},
-{
-  path: "ordem",
-  component: OrdemComponent
-},
-{
-  path: "ordem/create",
-  component: CreateOrdemComponent
-}
+const routes: Routes = [
+  {path: '',component: ContentComponent},
+  {path: 'login',component: LoginComponent},
+  {path: "veiculos",component: VeiculoComponent},
+  {path: "veiculos/create",component: CreateComponent},
+  {path: "veiculos/update/:id",component: UpdateComponent},
+  {path: "veiculos/delete/:id",component: DeleteComponent},
+  {path: "condutor",component: CondutorComponent},
+  {path: "condutor/create",component: CreateCondutorComponent},
+  {path: "condutor/update/:id",component: UpdateCondutorComponent},
+  {path: "condutor/delete/:id",component: DeleteCondutorComponent},
+  {path: "ordem",component: OrdemComponent},
+  {path: "ordem/create",component: CreateOrdemComponent}
 ];
 
 @NgModule({
