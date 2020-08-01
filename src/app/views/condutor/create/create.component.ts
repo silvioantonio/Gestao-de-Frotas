@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CondutorService } from './../../../components/condutor/condutor.service';
-import { Condutor } from './../../../components/condutor/condutor.model';
 import { Router } from '@angular/router';
 import { LyTheme2, ThemeVariables } from '@alyle/ui';
 import { LyIconService } from '@alyle/ui/icon';
+import { CondutorService } from './../../../components/condutor/condutor.service';
+import { Condutor } from './../../../components/condutor/condutor.model';
 
 const STYLES = (_theme: ThemeVariables) => ({
   icon: {

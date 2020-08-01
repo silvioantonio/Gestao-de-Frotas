@@ -5,6 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { LyTheme2, ThemeVariables } from '@alyle/ui';
 import { LyIconService } from '@alyle/ui/icon';
 
+
 const STYLES = (_theme: ThemeVariables) => ({
   icon: {
     marginAfter: '.5em'

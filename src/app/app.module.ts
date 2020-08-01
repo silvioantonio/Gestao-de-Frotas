@@ -34,17 +34,13 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatIconModule } from "@angular/material/icon";
 
+import { CondutorModule } from './views/condutor/condutor.module';
+
 import { VeiculoComponent } from './views/veiculo/veiculo.component';
 import { ReadComponent } from './views/veiculo/read/read.component';
 import { UpdateComponent } from './views/veiculo/update/update.component';
 import { DeleteComponent } from './views/veiculo/delete/delete.component';
 import { CreateComponent } from './views/veiculo/create/create.component';
-
-import { CondutorComponent } from './views/condutor/condutor.component';
-import { ReadCondutorComponent } from './views/condutor/read/read.component';
-import { CreateCondutorComponent } from './views/condutor/create/create.component';
-import { UpdateCondutorComponent } from './views/condutor/update/update.component';
-import { DeleteCondutorComponent } from './views/condutor/delete/delete.component';
 
 import { OrdemComponent } from './views/ordemtrafego/ordem.component';
 import { ReadOrdemComponent } from './views/ordemtrafego/read/read.component';
@@ -64,17 +60,13 @@ import { LoginComponent } from './components/login/login.component';
     ReadComponent,
     UpdateComponent,
     DeleteComponent,
-    CondutorComponent,
-    CreateCondutorComponent,
-    ReadCondutorComponent,
-    UpdateCondutorComponent,
-    DeleteCondutorComponent,
     OrdemComponent,
     ReadOrdemComponent,
     CreateOrdemComponent,
     LoginComponent,
   ],
   imports: [
+    CondutorModule,
     BrowserModule,
     CommonModule,
     AppRoutingModule,

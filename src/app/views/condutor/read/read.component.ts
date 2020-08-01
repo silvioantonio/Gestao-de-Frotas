@@ -1,10 +1,11 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { LyTheme2, ThemeVariables } from '@alyle/ui';
-import { Condutor } from '../../../components/condutor/condutor.model';
-import { CondutorService } from '../../../components/condutor/condutor.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
+
+import { Condutor } from '../../../components/condutor/condutor.model';
+import { CondutorService } from '../../../components/condutor/condutor.service';
 import { CondutorDataSource } from '../../../components/condutor/condutor-datasource';
 
 const STYLES = (_theme: ThemeVariables) => ({
