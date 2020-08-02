@@ -36,7 +36,7 @@ import { MatIconModule } from "@angular/material/icon";
 
 import { CondutorModule } from './views/condutor/condutor.module';
 
-import { VeiculoModule } from "./views/veiculo/veiculo.model";
+import { VeiculoModule } from "./views/veiculo/veiculo.module";
 
 import { OrdemModule } from "./views/ordemtrafego/ondem.module";
 

@@ -28,9 +28,11 @@ import { LyCardModule } from '@alyle/ui/card';
 import { OrdemService } from 'src/app/components/ordemdetrafego/ordem.service';
 import { MinimaDark } from '@alyle/ui/themes/minima';
 import { CreateOrdemComponent } from './create/create.ordem.component';
+import { OrdemRoutingModule } from './ordem.routing.module';
 
 @NgModule({
     imports: [
+        OrdemRoutingModule,
         RouterModule,
         BrowserModule,
         HammerModule,
