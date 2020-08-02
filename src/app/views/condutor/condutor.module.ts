@@ -32,8 +32,11 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MinimaDark } from '@alyle/ui/themes/minima';
 
+import { CondutorRoutingModule } from "./condutor.routing.module";
+
 @NgModule({
   imports: [
+    CondutorRoutingModule,
     RouterModule,
     BrowserModule,
     HammerModule,
