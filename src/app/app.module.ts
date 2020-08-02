@@ -36,11 +36,7 @@ import { MatIconModule } from "@angular/material/icon";
 
 import { CondutorModule } from './views/condutor/condutor.module';
 
-import { VeiculoComponent } from './views/veiculo/veiculo.component';
-import { ReadComponent } from './views/veiculo/read/read.component';
-import { UpdateComponent } from './views/veiculo/update/update.component';
-import { DeleteComponent } from './views/veiculo/delete/delete.component';
-import { CreateComponent } from './views/veiculo/create/create.component';
+import { VeiculoModule } from "./views/veiculo/veiculo.model";
 
 import { OrdemComponent } from './views/ordemtrafego/ordem.component';
 import { ReadOrdemComponent } from './views/ordemtrafego/read/read.component';
@@ -55,17 +51,13 @@ import { LoginComponent } from './components/login/login.component';
     FooterComponent,
     NavComponent,
     ContentComponent,
-    VeiculoComponent,
-    CreateComponent,
-    ReadComponent,
-    UpdateComponent,
-    DeleteComponent,
     OrdemComponent,
     ReadOrdemComponent,
     CreateOrdemComponent,
     LoginComponent,
   ],
   imports: [
+    VeiculoModule,
     CondutorModule,
     BrowserModule,
     CommonModule,
