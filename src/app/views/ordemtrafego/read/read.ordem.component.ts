@@ -16,8 +16,8 @@ const STYLES = (_theme: ThemeVariables) => ({
 
 @Component({
   selector: 'app-read-ordem',
-  templateUrl: './read.component.html',
-  styleUrls: ['./read.component.css']
+  templateUrl: './read.ordem.component.html',
+  styleUrls: ['./read.ordem.component.css']
 })
 export class ReadOrdemComponent implements AfterViewInit, OnInit {
 

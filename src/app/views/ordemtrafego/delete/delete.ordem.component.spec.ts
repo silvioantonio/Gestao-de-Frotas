@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReadComponent } from './read.component';
+import { DeleteOrdemComponent } from './delete.ordem.component';
 
-describe('ReadComponent', () => {
-  let component: ReadComponent;
-  let fixture: ComponentFixture<ReadComponent>;
+describe('DeleteOrdemComponent', () => {
+  let component: DeleteOrdemComponent;
+  let fixture: ComponentFixture<DeleteOrdemComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReadComponent ]
+      declarations: [ DeleteOrdemComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ReadComponent);
+    fixture = TestBed.createComponent(DeleteOrdemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

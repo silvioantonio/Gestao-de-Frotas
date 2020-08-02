@@ -38,9 +38,7 @@ import { CondutorModule } from './views/condutor/condutor.module';
 
 import { VeiculoModule } from "./views/veiculo/veiculo.model";
 
-import { OrdemComponent } from './views/ordemtrafego/ordem.component';
-import { ReadOrdemComponent } from './views/ordemtrafego/read/read.component';
-import { CreateOrdemComponent } from './views/ordemtrafego/create/create.component';
+import { OrdemModule } from "./views/ordemtrafego/ondem.module";
 
 import { LoginComponent } from './components/login/login.component';
 
@@ -51,12 +49,10 @@ import { LoginComponent } from './components/login/login.component';
     FooterComponent,
     NavComponent,
     ContentComponent,
-    OrdemComponent,
-    ReadOrdemComponent,
-    CreateOrdemComponent,
     LoginComponent,
   ],
   imports: [
+    OrdemModule,
     VeiculoModule,
     CondutorModule,
     BrowserModule,

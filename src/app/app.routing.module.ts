@@ -15,7 +15,7 @@ import { UpdateCondutorComponent } from './views/condutor/update/update.componen
 import { DeleteCondutorComponent } from './views/condutor/delete/delete.component';
 
 import { OrdemComponent } from './views/ordemtrafego/ordem.component';
-import { CreateOrdemComponent } from './views/ordemtrafego/create/create.component';
+import { CreateOrdemComponent } from './views/ordemtrafego/create/create.ordem.component';
 
 const routes: Routes = [
   {path: '',component: ContentComponent},

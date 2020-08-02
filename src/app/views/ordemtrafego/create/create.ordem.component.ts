@@ -1,8 +1,8 @@
-import { VeiculoService } from './../../../components/veiculo/veiculo.service';
+import { VeiculoService } from '../../../components/veiculo/veiculo.service';
 import { Veiculo } from 'src/app/components/veiculo/veiculo.model';
 import { Condutor } from 'src/app/components/condutor/condutor.model';
 import { CondutorService } from 'src/app/components/condutor/condutor.service';
-import { Ordem } from './../../../components/ordemdetrafego/ordem.model';
+import { Ordem } from '../../../components/ordemdetrafego/ordem.model';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LyTheme2, ThemeVariables } from '@alyle/ui';
@@ -18,8 +18,8 @@ const STYLES = (_theme: ThemeVariables) => ({
 
 @Component({
   selector: 'app-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  templateUrl: './create.ordem.component.html',
+  styleUrls: ['./create.ordem.component.css']
 })
 export class CreateOrdemComponent implements OnInit {
 
