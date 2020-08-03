@@ -5,8 +5,11 @@ import { ContentComponent } from './components/template/content/content.componen
 import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
-  {path: '',component: ContentComponent},
-  {path: 'login',component: LoginComponent},
+  {path: '', component: ContentComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'condutor', loadChildren: () => import('./views/condutor/condutor.module').then(m => m.CondutorModule)},
+  {path: 'veiculos', loadChildren: () => import('./views/veiculo/veiculo.module').then(m => m.VeiculoModule)},
+  {path: 'ordem', loadChildren: () => import('./views/ordemtrafego/ordem.module').then(m => m.OrdemModule)},
 ];
 
 @NgModule({
