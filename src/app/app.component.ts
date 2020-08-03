@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { AuthService } from './components/login/auth.service';
+import { Component, OnInit } from '@angular/core';
 import { ThemeVariables, ThemeRef, lyl, StyleRenderer } from '@alyle/ui';
 
 const STYLES = (theme: ThemeVariables, ref: ThemeRef) => {
@@ -25,11 +26,19 @@ const STYLES = (theme: ThemeVariables, ref: ThemeRef) => {
   styleUrls: ['./app.component.css'],
   providers: [StyleRenderer]
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   readonly classes = this.sRenderer.renderSheet(STYLES, true);
 
   title = 'frontend';
 
-  constructor(readonly sRenderer: StyleRenderer) { }
+  mostrarMenu: boolean = false;
+
+  constructor(readonly sRenderer: StyleRenderer, private authService: AuthService) {
+
+   }
+
+   ngOnInit() {
+      this.authService.mostrarMenuEmitter.subscribe((mostrar: boolean) => this.mostrarMenu = mostrar);
+   }
 
 }

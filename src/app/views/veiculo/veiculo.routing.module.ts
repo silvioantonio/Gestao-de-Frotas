@@ -4,12 +4,13 @@ import { VeiculoComponent } from './veiculo.component';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
+import { AuthGuard } from 'src/app/guards/auth.guard';
 
 const veiculoRoutes = [
-    {path: "veiculos",component: VeiculoComponent},
-    {path: "veiculos/create",component: CreateComponent},
-    {path: "veiculos/update/:id",component: UpdateComponent},
-    {path: "veiculos/delete/:id",component: DeleteComponent},
+    {path: "veiculos",component: VeiculoComponent, canActivate: [AuthGuard]},
+    {path: "veiculos/create",component: CreateComponent, canActivate: [AuthGuard]},
+    {path: "veiculos/update/:id",component: UpdateComponent, canActivate: [AuthGuard]},
+    {path: "veiculos/delete/:id",component: DeleteComponent, canActivate: [AuthGuard]},
 ];
 
 @NgModule({

@@ -1,1 +1,14 @@
-<p>login works!</p>
+<div class="container">
+  <div class="box">
+  <mat-form-field appearance="fill">
+    <mat-label>Usuario</mat-label>
+    <input matInput [(ngModel)] = 'usuario.username' id='usuario'>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Senha</mat-label>
+    <input matInput type='password' [(ngModel)] = 'usuario.password' id='senha'>
+  </mat-form-field>
+  <button ly-button color="secondary" (click)="login()">Login</button>
+</div>
+</div>

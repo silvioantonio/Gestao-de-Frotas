@@ -1,3 +1,5 @@
+import { AuthGuard } from './guards/auth.guard';
+import { AuthService } from './components/login/auth.service';
 import { BrowserModule, HammerModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -38,7 +40,7 @@ import { CondutorModule } from './views/condutor/condutor.module';
 
 import { VeiculoModule } from "./views/veiculo/veiculo.module";
 
-import { OrdemModule } from "./views/ordemtrafego/ondem.module";
+import { OrdemModule } from "./views/ordemtrafego/ordem.module";
 
 import { LoginComponent } from './components/login/login.component';
 
@@ -83,7 +85,7 @@ import { LoginComponent } from './components/login/login.component';
     MatPaginatorModule,
     MatSortModule,
   ],
-  providers: [StyleRenderer, LyTheme2,
+  providers: [StyleRenderer, LyTheme2, AuthService, AuthGuard,
     { provide: LY_THEME_NAME, useValue: 'minima-dark' },
     { provide: LY_THEME, useClass: MinimaDark, multi: true }
   ],
