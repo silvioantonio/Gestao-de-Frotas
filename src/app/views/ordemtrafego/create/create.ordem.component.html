@@ -9,13 +9,13 @@
         <input lyNativeControl placeholder="Destino" [(ngModel)]="ordem.destino" name="destino">
       </ly-field>
       <ly-field>
-        <input lyNativeControl placeholder="Data da Viagem" [(ngModel)]="ordem.dataDaViagem" name="dataDaViagem">
+        <input lyNativeControl type="date" [(ngModel)]="ordem.dataDaViagem" name="dataDaViagem">
       </ly-field>
       <ly-field>
-        <input lyNativeControl placeholder="Hora da Viagem" [(ngModel)]="ordem.horaDaViagem" name="horaDaViagem">
+        <input lyNativeControl type="time" placeholder="Hora da Viagem" [(ngModel)]="ordem.horaDaViagem" name="horaDaViagem">
       </ly-field>
       <ly-field>
-        <input lyNativeControl placeholder="Distancia Percorrida" [(ngModel)]="ordem.distanciaPercorrida" name="distanciaPercorrida">
+        <input lyNativeControl type="number" placeholder="Distancia Percorrida" [(ngModel)]="ordem.distanciaPercorrida" name="distanciaPercorrida">
       </ly-field>
       <ly-field appearance="outlined">
         <ly-label>Status</ly-label>

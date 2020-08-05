@@ -33,6 +33,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MinimaDark } from '@alyle/ui/themes/minima';
 
 import { CondutorRoutingModule } from "./condutor.routing.module";
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   imports: [
@@ -64,6 +66,8 @@ import { CondutorRoutingModule } from "./condutor.routing.module";
     LyButtonModule,
     LyTypographyModule,
     LyCardModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   exports: [],
   declarations: [

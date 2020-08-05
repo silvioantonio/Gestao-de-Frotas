@@ -29,6 +29,8 @@ import { OrdemService } from 'src/app/components/ordemdetrafego/ordem.service';
 import { MinimaDark } from '@alyle/ui/themes/minima';
 import { CreateOrdemComponent } from './create/create.ordem.component';
 import { OrdemRoutingModule } from './ordem.routing.module';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
     imports: [
@@ -60,6 +62,8 @@ import { OrdemRoutingModule } from './ordem.routing.module';
         LyButtonModule,
         LyTypographyModule,
         LyCardModule,
+        MatDatepickerModule,
+        MatNativeDateModule
     ],
     exports: [],
     declarations: [OrdemComponent, ReadOrdemComponent, CreateOrdemComponent],

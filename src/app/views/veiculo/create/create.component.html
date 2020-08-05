@@ -3,7 +3,7 @@
     <h2 lyTyp="headline" gutterBottom>Novo Veiculo</h2>
     <form>
       <ly-field>
-        <input lyNativeControl placeholder="Ano de fabricação" [(ngModel)]="veiculo.anoFabricacao" name="anoFabricacao">
+        <input lyNativeControl type="month" placeholder="Ano de fabricação" [(ngModel)]="veiculo.anoFabricacao" name="anoFabricacao">
       </ly-field>
       <ly-field>
         <input lyNativeControl placeholder="Modelo" [(ngModel)]="veiculo.modelo" name="modelo">
@@ -15,7 +15,7 @@
         <input lyNativeControl placeholder="Cor" [(ngModel)]="veiculo.cor" name="cor">
       </ly-field>
       <ly-field>
-        <input lyNativeControl placeholder="KM" [(ngModel)]="veiculo.km" name="km">
+        <input lyNativeControl type="number" placeholder="KM" [(ngModel)]="veiculo.km" name="km">
       </ly-field>
       <ly-field class="alter" appearance="outlined">
         <ly-label>Marcas</ly-label>

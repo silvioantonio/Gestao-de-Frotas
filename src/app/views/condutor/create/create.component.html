@@ -12,10 +12,10 @@
         <input lyNativeControl placeholder="Matricula" [(ngModel)]="condutor.matricula" name="matricula">
       </ly-field>
       <ly-field>
-        <input lyNativeControl placeholder="CNH" [(ngModel)]="condutor.cnh.numeroCNH" name="numeroCNH">
+        <input lyNativeControl type="number" placeholder="CNH" [(ngModel)]="condutor.cnh.numeroCNH" name="numeroCNH">
       </ly-field>
       <ly-field>
-        <input lyNativeControl placeholder="Validade" [(ngModel)]="condutor.cnh.validade" name="validade">
+        <input lyNativeControl type="date" [(ngModel)]="condutor.cnh.validade" name="validade">
       </ly-field>
       <ly-field appearance="outlined">
         <ly-label>Categoria CNH</ly-label>
