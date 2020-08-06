@@ -9,8 +9,8 @@ import { Observable } from 'rxjs';
 })
 export class OrdemService {
 
-  //baseUrl = 'http://localhost:8080/ordemtrafego'
-  private baseUrl = 'https://gestao-de-frotas-backend.herokuapp.com/ordemtrafego'
+  baseUrl = 'http://localhost:8080/ordemtrafego'
+  //baseUrl = 'https://gestao-de-frotas-backend.herokuapp.com/ordemtrafego'
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 

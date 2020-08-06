@@ -59,6 +59,9 @@ export class CreateOrdemComponent implements OnInit {
     distanciaPercorrida: null
   }
 
+  condutores = [];
+  veiculos = [];
+
   readonly classes = this._theme.addStyleSheet(STYLES);
 
   constructor(
@@ -71,17 +74,14 @@ export class CreateOrdemComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.condutorService.read().subscribe(res => this.condutores = res['content']);
+    this.veiculoService.read().subscribe(res => this.veiculos = res['content']);
   }
 
   createOrdem(): void {
-    let condutor: Condutor;
-    let veiculo: Veiculo;
+   // this.condutorService.readByMatricula(this.ordem.condutor.matricula).subscribe( res => condutor = res);
 
-    this.condutorService.readByMatricula(this.ordem.condutor.matricula).subscribe( res => { condutor = res} );
-    this.veiculoService.readByPlaca(this.ordem.veiculo.placa).subscribe( res => { veiculo = res} );
-
-    this.ordem.condutor = condutor;
-    this.ordem.veiculo = veiculo;
+    //this.veiculoService.readByPlaca(this.ordem.veiculo.placa).subscribe( res => { veiculo = res} );
 
     this.ordemService.create(this.ordem).subscribe( () => {
       this.ordemService.showMessage('Ordem de Trafego cadastrado!')
