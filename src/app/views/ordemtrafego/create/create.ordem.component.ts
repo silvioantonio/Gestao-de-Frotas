@@ -61,6 +61,10 @@ export class CreateOrdemComponent implements OnInit {
 
   condutores = [];
   veiculos = [];
+  condutor: Condutor;
+  veiculo: Veiculo;
+  matricula: number;
+  placa: string;
 
   readonly classes = this._theme.addStyleSheet(STYLES);
 
@@ -79,9 +83,10 @@ export class CreateOrdemComponent implements OnInit {
   }
 
   createOrdem(): void {
-   // this.condutorService.readByMatricula(this.ordem.condutor.matricula).subscribe( res => condutor = res);
 
-    //this.veiculoService.readByPlaca(this.ordem.veiculo.placa).subscribe( res => { veiculo = res} );
+    this.condutorService.readByMatricula(this.matricula).subscribe( res => this.ordem.condutor = res );
+
+    this.veiculoService.readByPlaca(this.placa).subscribe( res => this.ordem.veiculo = res );
 
     this.ordemService.create(this.ordem).subscribe( () => {
       this.ordemService.showMessage('Ordem de Trafego cadastrado!')

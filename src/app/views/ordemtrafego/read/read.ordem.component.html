@@ -29,12 +29,12 @@
       </ng-container>
 
       <ng-container matColumnDef="dataDaViagem">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Data Da Viagem</th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Data Viagem</th>
         <td mat-cell *matCellDef="let row">{{ row.dataDaViagem }}</td>
       </ng-container>
 
       <ng-container matColumnDef="horaDaViagem">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Hora Da Viagem</th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Hora Viagem</th>
         <td mat-cell *matCellDef="let row">{{ row.horaDaViagem }}</td>
       </ng-container>
 
@@ -44,17 +44,27 @@
       </ng-container>
 
       <ng-container matColumnDef="distanciaPercorrida">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Distancia Percorrida</th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Dist Percorrida</th>
         <td mat-cell *matCellDef="let row">{{ row.distanciaPercorrida }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="matricula">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Mat Cond</th>
+        <td mat-cell *matCellDef="let row">{{ row.condutor_id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="placa">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Placa</th>
+        <td mat-cell *matCellDef="let row">{{ row.veiculo_id }}</td>
       </ng-container>
 
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef >Ações</th>
         <td class="action" mat-cell *matCellDef="let row">
-          <a class="edit" routerLink="/condutor/update/{{ row.id }}">
+          <a class="edit" routerLink="/ordem">
             <ly-icon color="primary">edit_outline</ly-icon>
           </a>
-          <a class="delete" routerLink="/condutor/delete/{{ row.id }}">
+          <a class="delete" routerLink="/ordem">
             <ly-icon color="warn">delete_outline</ly-icon>
           </a>
         </td>

@@ -28,14 +28,14 @@
       </ly-field>
       <ly-field appearance="outlined">
         <ly-label>Condutor</ly-label>
-        <ly-select [(ngModel)]="ordem.condutor.matricula" name="condutor">
+        <ly-select [(ngModel)]="matricula" name="condutor">
           <ly-option *ngFor="let condutor of condutores" [value]="condutor.matricula"> {{condutor.matricula}}
           </ly-option>
         </ly-select>
       </ly-field>
       <ly-field appearance="outlined">
         <ly-label>placa</ly-label>
-        <ly-select [(ngModel)]="ordem.veiculo.placa" name="placa">
+        <ly-select [(ngModel)]="placa" name="placa">
           <ly-option *ngFor="let veiculo of veiculos" [value]="veiculo.placa"> {{veiculo.placa}} </ly-option>
         </ly-select>
       </ly-field>
