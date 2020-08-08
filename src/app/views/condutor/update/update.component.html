@@ -25,7 +25,7 @@
           <ly-option value="B">B</ly-option>
           <ly-option value="C">C</ly-option>
           <ly-option value="D">D</ly-option>
-          <ly-option value="E">E</ly-option>
+          <ly-option id="E" value="E">E</ly-option>
         </ly-select>
       </ly-field>
       <ly-field>
@@ -43,7 +43,7 @@
     </form>
   </ly-card-content>
   <ly-card-actions>
-    <button ly-button outlined color="primary" (click)="updateCondutor()">
+    <button ly-button outlined id="btnSalvar" color="primary" (click)="updateCondutor()">
       <ly-icon [withClass]="classes.icon">create</ly-icon>
     </button>
     <button ly-button outlined color="warn" (click)="cancel()">
