@@ -75,7 +75,7 @@
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef>Ações</th>
         <td class="action" mat-cell *matCellDef="let row">
-          <a class="edit" routerLink="/condutor/update/{{ row.id }}">
+          <a id="editar" class="edit" routerLink="/condutor/update/{{ row.id }}">
             <ly-icon color="primary">edit_outline</ly-icon>
           </a>
           <a class="delete" routerLink="/condutor/delete/{{ row.id }}">
