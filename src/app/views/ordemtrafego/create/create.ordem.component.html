@@ -12,25 +12,34 @@
         <input lyNativeControl type="date" [(ngModel)]="ordem.dataDaViagem" name="dataDaViagem">
       </ly-field>
       <ly-field>
-        <input lyNativeControl type="time" placeholder="Hora da Viagem" [(ngModel)]="ordem.horaDaViagem" name="horaDaViagem">
+        <input lyNativeControl type="time" placeholder="Hora da Viagem" [(ngModel)]="ordem.horaDaViagem"
+          name="horaDaViagem">
       </ly-field>
       <ly-field>
-        <input lyNativeControl type="number" placeholder="Distancia Percorrida" [(ngModel)]="ordem.distanciaPercorrida" name="distanciaPercorrida">
+        <input lyNativeControl type="number" placeholder="Distancia Percorrida" [(ngModel)]="ordem.distanciaPercorrida"
+          name="distanciaPercorrida">
       </ly-field>
       <ly-field appearance="outlined">
         <ly-label>Status</ly-label>
-        <ly-select placeholder="Status"
-          [(ngModel)]="ordem.status" name="status">
+        <ly-select placeholder="Status" [(ngModel)]="ordem.status" name="status">
           <ly-option value="ATIVO">Ativo</ly-option>
           <ly-option value="INATIVO">Inativo</ly-option>
         </ly-select>
       </ly-field>
-      <ly-field>
-        <input lyNativeControl placeholder="Matricula do condutor" [(ngModel)]="ordem.condutor.matricula" name="matricula">
+      <ly-field appearance="outlined">
+        <ly-label>Condutor</ly-label>
+        <ly-select [(ngModel)]="matricula" name="condutor">
+          <ly-option *ngFor="let condutor of condutores" [value]="condutor.matricula"> {{condutor.matricula}}
+          </ly-option>
+        </ly-select>
       </ly-field>
-      <ly-field>
-        <input lyNativeControl placeholder="Placa do Veiculo" [(ngModel)]="ordem.veiculo.placa" name="placa">
+      <ly-field appearance="outlined">
+        <ly-label>placa</ly-label>
+        <ly-select [(ngModel)]="placa" name="placa">
+          <ly-option *ngFor="let veiculo of veiculos" [value]="veiculo.placa"> {{veiculo.placa}} </ly-option>
+        </ly-select>
       </ly-field>
+
     </form>
   </ly-card-content>
   <ly-card-actions>

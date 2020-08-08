@@ -4,7 +4,7 @@ import { OrdemComponent } from './ordem.component';
 import { ReadOrdemComponent } from './read/read.ordem.component';
 import { RouterModule } from '@angular/router';
 import { BrowserModule, HammerModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
@@ -34,11 +34,12 @@ import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
     imports: [
+        BrowserModule,
         OrdemRoutingModule,
         RouterModule,
-        BrowserModule,
         HammerModule,
         FormsModule,
+        ReactiveFormsModule,
         CommonModule,
         MatPaginatorModule,
         MatSortModule,
@@ -63,7 +64,7 @@ import { MatNativeDateModule } from '@angular/material/core';
         LyTypographyModule,
         LyCardModule,
         MatDatepickerModule,
-        MatNativeDateModule
+        MatNativeDateModule,
     ],
     exports: [],
     declarations: [OrdemComponent, ReadOrdemComponent, CreateOrdemComponent],
