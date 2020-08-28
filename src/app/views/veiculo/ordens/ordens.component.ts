@@ -16,11 +16,11 @@ const STYLES = (_theme: ThemeVariables) => ({
 });
 
 @Component({
-  selector: 'app-orden-condutor',
+  selector: 'app-orden-veiculo',
   templateUrl: './ordens.component.html',
   styleUrls: ['./ordens.component.css']
 })
-export class OrdensCondutorComponent implements AfterViewInit, OnInit {
+export class OrdensVeiculoComponent implements AfterViewInit, OnInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -48,7 +48,7 @@ export class OrdensCondutorComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit() {
-    this.ordemService.readCondutorById(this.id).subscribe(res => {
+    this.ordemService.readVeiculoById(this.id).subscribe(res => {
       console.log(res)
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;

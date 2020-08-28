@@ -31,6 +31,7 @@ import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
 import { VeiculoRoutingModule } from "./veiculo.routing.module";
+import { OrdensVeiculoComponent } from "./ordens/ordens.component";
 
 @NgModule({
     imports: [
@@ -64,7 +65,7 @@ import { VeiculoRoutingModule } from "./veiculo.routing.module";
       LyCardModule,
     ],
     exports: [],
-    declarations: [VeiculoComponent, ReadComponent, CreateComponent, UpdateComponent, DeleteComponent],
+    declarations: [VeiculoComponent, ReadComponent, CreateComponent, UpdateComponent, DeleteComponent, OrdensVeiculoComponent],
     providers: [VeiculoService, StyleRenderer, LyTheme2,
         { provide: LY_THEME_NAME, useValue: 'minima-dark' },
         { provide: LY_THEME, useClass: MinimaDark, multi: true }
