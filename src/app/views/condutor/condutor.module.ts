@@ -24,6 +24,7 @@ import { DeleteCondutorComponent } from './delete/delete.component';
 import { UpdateCondutorComponent } from './update/update.component';
 import { ReadCondutorComponent } from './read/read.component';
 import { CreateCondutorComponent } from './create/create.component';
+import { OrdensCondutorComponent } from './ordens/ordens.component';
 
 import { LyThemeModule, LyCommonModule, StyleRenderer, LyTheme2, LY_THEME_NAME, LY_THEME } from '@alyle/ui';
 import { LyIconModule } from '@alyle/ui/icon';
@@ -75,7 +76,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     CreateCondutorComponent,
     ReadCondutorComponent,
     UpdateCondutorComponent,
-    DeleteCondutorComponent
+    DeleteCondutorComponent,
+    OrdensCondutorComponent
   ],
   providers: [CondutorService,StyleRenderer, LyTheme2,
     { provide: LY_THEME_NAME, useValue: 'minima-dark' },
