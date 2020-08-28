@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 import { LyTheme2, ThemeVariables } from '@alyle/ui';
 import { LyIconService } from '@alyle/ui/icon';
 import { OrdemService } from 'src/app/components/ordemdetrafego/ordem.service';
+import { formatDate } from '@angular/common';
 
 
 const STYLES = (_theme: ThemeVariables) => ({
@@ -28,18 +29,18 @@ export class CreateOrdemComponent implements OnInit {
     destino: '',
     veiculo: {
       anoFabricacao: null,
-      categoria: '',
+      categoria: 'PASSEIO',
       cor: '',
-      estadoConservacao: '',
+      estadoConservacao: 'NOVO',
       km: null,
-      marca: '',
+      marca: 'FIAT',
       modelo: '',
       placa: '',
-      tipoCombustivel: '',
+      tipoCombustivel: 'GASOLINA',
     },
     condutor: {
       cnh: {
-        categoriaCnh: '',
+        categoriaCnh: 'B',
         numeroCNH: null,
         validade: ''
       },
@@ -84,9 +85,13 @@ export class CreateOrdemComponent implements OnInit {
 
   createOrdem(): void {
 
-    this.condutorService.readByMatricula(this.matricula).subscribe( res => this.ordem.condutor = res );
+    this.condutorService.readByMatricula(this.matricula).subscribe( res => {
+      this.ordem.condutor = res 
+    });
 
-    this.veiculoService.readByPlaca(this.placa).subscribe( res => this.ordem.veiculo = res );
+    this.veiculoService.readByPlaca(this.placa).subscribe( res => {
+      this.ordem.veiculo = res 
+    });
 
     this.ordemService.create(this.ordem).subscribe( () => {
       this.ordemService.showMessage('Ordem de Trafego cadastrado!')
