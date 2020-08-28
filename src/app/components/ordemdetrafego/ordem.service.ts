@@ -37,6 +37,11 @@ export class OrdemService {
     return this.http.get<Ordem>(url)
   }
 
+  readCondutorById(id: string): Observable<Ordem[]>{
+    const url = `${this.baseUrl}/condutor/${id}`
+    return this.http.get<Ordem[]>(url)
+  }
+
   update(ordem: Ordem): Observable<Ordem> {
     return this.http.put<Ordem>(this.baseUrl, ordem)
   }
